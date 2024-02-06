@@ -59,7 +59,9 @@ func scrapeCondos(url string) []CondoType {
 
 		// Scrape the data we are interested of
 		condo.address = condoElement.ChildText("h4.text-3xl.mb-4")
-		condo.squareFootage = condoElement.ChildText("span.font-bold.whitespace-nowrap")
+		dirtySquareFootageValue := condoElement.ChildText("span.font-bold.whitespace-nowrap")
+		// Clean up additional square meter suffix
+		condo.squareFootage = strings.TrimSuffix(dirtySquareFootageValue, " m2")
 
 		// "sizeDescription" and "buildingType" are on the same line as one string
 		description := condoElement.ChildText("span.font-normal.text-right")
