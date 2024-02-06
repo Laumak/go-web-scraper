@@ -46,7 +46,7 @@ func writePokemonCSV(pokemonProducts []PokemonProduct) {
 	defer writer.Flush()
 }
 
-func scrapePokemonProducts() []PokemonProduct {
+func scrapePokemonProducts(url string) []PokemonProduct {
 	c := colly.NewCollector(colly.Debugger(&debug.LogDebugger{}))
 	var pokemonProducts []PokemonProduct
 
@@ -63,14 +63,14 @@ func scrapePokemonProducts() []PokemonProduct {
 	})
 
 	// Start scraping
-	c.Visit("https://scrapeme.live/shop/")
+	c.Visit(url)
 
 	return pokemonProducts
 }
 
 func main() {
 	// Scrape pokemon data and store findings to a struct
-	pokemonProducts := scrapePokemonProducts()
+	pokemonProducts := scrapePokemonProducts("https://scrapeme.live/shop/")
 
 	// Write CSV with the gathered data
 	writePokemonCSV(pokemonProducts)
