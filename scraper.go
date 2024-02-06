@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/debug"
 )
 
 type PokemonProduct struct {
@@ -46,7 +47,7 @@ func writePokemonCSV(pokemonProducts []PokemonProduct) {
 }
 
 func scrapePokemonProducts() []PokemonProduct {
-	c := colly.NewCollector()
+	c := colly.NewCollector(colly.Debugger(&debug.LogDebugger{}))
 	var pokemonProducts []PokemonProduct
 
 	c.OnHTML("li.product", func(pokemonListElement *colly.HTMLElement) {
