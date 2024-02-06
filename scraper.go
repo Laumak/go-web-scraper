@@ -4,16 +4,20 @@ import (
 	"encoding/csv"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/gocolly/colly"
 	"github.com/gocolly/colly/debug"
 )
 
-type PokemonProduct struct {
-	url, image, name, price string
+type CondoType struct {
+	address         string // Viputie 11 A 1
+	squareFootage   string // 93,5 m2
+	sizeDescription string // 4H+K+S
+	buildingType    string // Paritalo
 }
 
-func writePokemonCSV(pokemonProducts []PokemonProduct) {
+func writeCSV(condos []CondoType) {
 	file, err := os.Create("products.csv")
 
 	if err != nil {
@@ -26,52 +30,56 @@ func writePokemonCSV(pokemonProducts []PokemonProduct) {
 
 	// Write the CSV column headers
 	writer.Write([]string{
-		"url",
-		"image",
-		"name",
-		"price",
+		"address",
+		"squareFootage",
+		"sizeDescription",
+		"buildingType",
 	})
 
-	for _, pokemonProduct := range pokemonProducts {
-		pokemonRecord := []string{
-			pokemonProduct.url,
-			pokemonProduct.image,
-			pokemonProduct.name,
-			pokemonProduct.price,
+	for _, condo := range condos {
+		condoRecord := []string{
+			condo.address,
+			condo.squareFootage,
+			condo.sizeDescription,
+			condo.buildingType,
 		}
 
-		writer.Write(pokemonRecord)
+		writer.Write(condoRecord)
 	}
 
 	defer writer.Flush()
 }
 
-func scrapePokemonProducts(url string) []PokemonProduct {
+func scrapeCondos(url string) []CondoType {
+	var availableCondos []CondoType
 	c := colly.NewCollector(colly.Debugger(&debug.LogDebugger{}))
-	var pokemonProducts []PokemonProduct
 
-	c.OnHTML("li.product", func(pokemonListElement *colly.HTMLElement) {
-		pokemonProduct := PokemonProduct{}
+	c.OnHTML("main.py-9.pb-14", func(condoElement *colly.HTMLElement) {
+		condo := CondoType{}
 
 		// Scrape the data we are interested of
-		pokemonProduct.url = pokemonListElement.ChildAttr("a", "href")
-		pokemonProduct.image = pokemonListElement.ChildAttr("img", "src")
-		pokemonProduct.name = pokemonListElement.ChildText("h2")
-		pokemonProduct.price = pokemonListElement.ChildText(".price")
+		condo.address = condoElement.ChildText("h4.text-3xl.mb-4")
+		condo.squareFootage = condoElement.ChildText("span.font-bold.whitespace-nowrap")
 
-		pokemonProducts = append(pokemonProducts, pokemonProduct)
+		// "sizeDescription" and "buildingType" are on the same line as one string
+		description := condoElement.ChildText("span.font-normal.text-right")
+		descriptionStrings := strings.Split(description, ",")
+		condo.sizeDescription = strings.TrimSpace(descriptionStrings[0])
+		condo.buildingType = strings.TrimSpace(descriptionStrings[1])
+
+		availableCondos = append(availableCondos, condo)
 	})
 
 	// Start scraping
 	c.Visit(url)
 
-	return pokemonProducts
+	return availableCondos
 }
 
 func main() {
-	// Scrape pokemon data and store findings to a struct
-	pokemonProducts := scrapePokemonProducts("https://scrapeme.live/shop/")
+	// Scrape data and store findings to a struct
+	availableCondos := scrapeCondos("https://www.asuntosaatio.fi/asunnot/etsi-asuntoa/?cities=Espoo&minSquareMeters=90&buildingTypes=Paritalo,Erillistalo,Rivitalo&roomTypes=4,5,6-99&type=AsoFilters")
 
 	// Write CSV with the gathered data
-	writePokemonCSV(pokemonProducts)
+	writeCSV(availableCondos)
 }
