@@ -73,7 +73,7 @@ func scrapeCondos(url string) []CondoType {
 		condo.sizeDescription = strings.TrimSpace(descriptionStrings[0])
 		condo.buildingType = strings.TrimSpace(descriptionStrings[1])
 		// TODO: Why no URL?
-		condo.url = condoElement.ChildAttr("a.btn-green-400", "href")
+		condo.url = condoElement.ChildAttr("a", "href")
 
 		availableCondos = append(availableCondos, condo)
 	})
