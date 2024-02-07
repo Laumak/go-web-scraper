@@ -19,7 +19,7 @@ type CondoType struct {
 }
 
 func writeCSV(condos []CondoType) {
-	file, err := os.Create("products.csv")
+	file, err := os.Create("condos.csv")
 
 	if err != nil {
 		log.Fatalln("Failed to create output CSV file", err)
