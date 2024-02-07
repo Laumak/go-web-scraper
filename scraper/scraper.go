@@ -1,4 +1,4 @@
-package main
+package scraper
 
 import (
 	"encoding/csv"
@@ -101,7 +101,7 @@ func scrapeCondos(url string) []CondoType {
 	return availableCondos
 }
 
-func main() {
+func Scrape() {
 	// Scrape data and store findings to a struct
 	availableCondos := scrapeCondos("https://www.asuntosaatio.fi/asunnot/etsi-asuntoa/?cities=Espoo&minSquareMeters=90&buildingTypes=Paritalo,Erillistalo,Rivitalo&roomTypes=4,5,6-99&type=AsoFilters")
 
