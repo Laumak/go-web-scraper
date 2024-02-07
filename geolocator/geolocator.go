@@ -34,11 +34,17 @@ func Geocode() {
 		return
 	}
 	defer response.Body.Close()
+	responseBody, _ := io.ReadAll(response.Body)
 
-	responseBody, responseError := io.ReadAll(response.Body)
-	if responseError != nil {
-		fmt.Println(responseError)
-		return
+	type Response struct {
+		Id     string `json:"id"`
+		Status string `json:"status"`
+		Url    string `json:"url"`
 	}
-	fmt.Println(string(responseBody))
+
+	var r Response
+
+	json.Unmarshal(responseBody, &r)
+
+	fmt.Println(r.Url)
 }
