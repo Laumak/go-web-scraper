@@ -2,6 +2,8 @@ package main
 
 import (
 	"encoding/csv"
+	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -11,11 +13,11 @@ import (
 )
 
 type CondoType struct {
-	address         string // Viputie 11 A 1
-	squareFootage   string // 93,5 m2
-	sizeDescription string // 4H+K+S
-	buildingType    string // Paritalo
-	url             string // https://www.asuntosaatio.fi/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/
+	Address         string `json:"address"`         // Viputie 11 A 1
+	SquareFootage   string `json:"squareFootage"`   // 93,5 m2
+	SizeDescription string `json:"sizeDescription"` // 4H+K+S
+	BuildingType    string `json:"buildingType"`    // Paritalo
+	Url             string `json:"url"`             // https://www.asuntosaatio.fi/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/
 }
 
 func writeCSV(condos []CondoType) {
@@ -40,17 +42,32 @@ func writeCSV(condos []CondoType) {
 
 	for _, condo := range condos {
 		condoRecord := []string{
-			condo.address,
-			condo.squareFootage,
-			condo.sizeDescription,
-			condo.buildingType,
-			condo.url,
+			condo.Address,
+			condo.SquareFootage,
+			condo.SizeDescription,
+			condo.BuildingType,
+			condo.Url,
 		}
 
 		writer.Write(condoRecord)
 	}
 
 	defer writer.Flush()
+}
+
+func writeJSON(availableCondos []CondoType) {
+	// Serialize the struct to JSON
+	jsonBytes, err := json.MarshalIndent(availableCondos, "", "  ")
+	if err != nil {
+		fmt.Println("Error marshaling JSON:", err)
+		return
+	}
+
+	// Write the JSON data to a file
+	err = os.WriteFile("condos.json", jsonBytes, os.ModePerm)
+	if err != nil {
+		fmt.Println("Error writing to file:", err)
+	}
 }
 
 func scrapeCondos(url string) []CondoType {
@@ -61,19 +78,19 @@ func scrapeCondos(url string) []CondoType {
 		condo := CondoType{}
 
 		// Scrape the data we are interested of
-		condo.address = condoElement.ChildText("h4.text-3xl.mb-4")
+		condo.Address = condoElement.ChildText("h4.text-3xl.mb-4")
 		dirtySquareFootageValue := condoElement.ChildText("span.font-bold.whitespace-nowrap")
 		// Clean up additional square meter suffix
 		squareFootageWithoutSuffix := strings.TrimSuffix(dirtySquareFootageValue, " m2")
-		condo.squareFootage = strings.Replace(squareFootageWithoutSuffix, ",", ".", 1)
+		condo.SquareFootage = strings.Replace(squareFootageWithoutSuffix, ",", ".", 1)
 
-		// "sizeDescription" and "buildingType" are on the same line as one string
+		// "sizeDescription" and "BuildingType" are on the same line as one string
 		description := condoElement.ChildText("span.font-normal.text-right")
 		descriptionStrings := strings.Split(description, ",")
-		condo.sizeDescription = strings.TrimSpace(descriptionStrings[0])
-		condo.buildingType = strings.TrimSpace(descriptionStrings[1])
+		condo.SizeDescription = strings.TrimSpace(descriptionStrings[0])
+		condo.BuildingType = strings.TrimSpace(descriptionStrings[1])
 		// TODO: Why no URL?
-		condo.url = condoElement.ChildAttr("a", "href")
+		condo.Url = condoElement.ChildAttr("a", "href")
 
 		availableCondos = append(availableCondos, condo)
 	})
@@ -90,4 +107,6 @@ func main() {
 
 	// Write CSV with the gathered data
 	writeCSV(availableCondos)
+
+	writeJSON(availableCondos)
 }
