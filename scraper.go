@@ -15,6 +15,7 @@ type CondoType struct {
 	squareFootage   string // 93,5 m2
 	sizeDescription string // 4H+K+S
 	buildingType    string // Paritalo
+	url             string // https://www.asuntosaatio.fi/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/
 }
 
 func writeCSV(condos []CondoType) {
@@ -34,6 +35,7 @@ func writeCSV(condos []CondoType) {
 		"squareFootage",
 		"sizeDescription",
 		"buildingType",
+		"url",
 	})
 
 	for _, condo := range condos {
@@ -42,6 +44,7 @@ func writeCSV(condos []CondoType) {
 			condo.squareFootage,
 			condo.sizeDescription,
 			condo.buildingType,
+			condo.url,
 		}
 
 		writer.Write(condoRecord)
@@ -69,6 +72,8 @@ func scrapeCondos(url string) []CondoType {
 		descriptionStrings := strings.Split(description, ",")
 		condo.sizeDescription = strings.TrimSpace(descriptionStrings[0])
 		condo.buildingType = strings.TrimSpace(descriptionStrings[1])
+		// TODO: Why no URL?
+		condo.url = condoElement.ChildAttr("a.btn-green-400", "href")
 
 		availableCondos = append(availableCondos, condo)
 	})
