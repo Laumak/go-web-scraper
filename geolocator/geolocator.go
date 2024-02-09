@@ -5,35 +5,52 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
+	"net/http/httputil"
 	"os"
 	"time"
 )
 
-func Geocode() {
+func makeRequest(method string, url string, data []byte) *http.Response {
+	fmt.Println(method, data)
+	client := &http.Client{}
+
+	// Get content from batch request
+	request, err := http.NewRequest(method, url, bytes.NewBuffer(data))
+	if err != nil {
+		log.Fatal(err)
+	}
+	request.Header.Set("Content-Type", "application/json")
+
+	reqDump, err := httputil.DumpRequestOut(request, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("REQUEST:\n%s", string(reqDump))
+
+	response, err := client.Do(request)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	respDump, _ := httputil.DumpResponse(response, true)
+	fmt.Printf("RESPONSE:\n%s", string(respDump))
+
+	return response
+}
+
+func getBatchResultsUrl() string {
 	// https://myprojects.geoapify.com/api/YzuOvi4LdmFMK7jCYQFL/keys
 	apiKey := os.Getenv("GEOAPIFY_API_KEY")
 	url := "https://api.geoapify.com/v1/batch/geocode/search?apiKey=" + apiKey
 
-	client := &http.Client{}
 	// https://gobyexample.com/json
 	slice := []string{"Viputie 11", "Juvanpuistonkuja 2"}
 	requestBody, _ := json.Marshal(slice)
 
-	request, requestError := http.NewRequest("POST", url, bytes.NewBuffer(requestBody))
-	request.Header.Set("Content-Type", "application/json")
-
-	if requestError != nil {
-		fmt.Println(requestError)
-		return
-	}
-
-	response, responseError := client.Do(request)
-	if responseError != nil {
-		fmt.Println(responseError)
-		return
-	}
-	defer response.Body.Close()
+	response := makeRequest("POST", url, []byte(requestBody))
 	responseBody, _ := io.ReadAll(response.Body)
 
 	type Response struct {
@@ -41,29 +58,18 @@ func Geocode() {
 		Status string `json:"status"`
 		Url    string `json:"url"`
 	}
-
 	var r Response
-
 	json.Unmarshal(responseBody, &r)
 
 	fmt.Println("Got batch process URL: ", r.Url)
 
-	time.Sleep(5 * time.Second)
+	return r.Url
+}
 
+func getBatchResultsFromUrl(url string) {
 	// Get content from batch request
-	request2, requestError2 := http.NewRequest("GET", url, bytes.NewBuffer([]byte(r.Url)))
-	if requestError2 != nil {
-		fmt.Println(requestError2)
-		return
-	}
-
-	response2, responseError2 := client.Do(request2)
-	if responseError2 != nil {
-		fmt.Println(responseError2)
-		return
-	}
-	defer response2.Body.Close()
-	responseBody2, _ := io.ReadAll(response2.Body)
+	response := makeRequest("GET", url, nil)
+	responseBody, _ := io.ReadAll(response.Body)
 
 	type BatchGeocodeType []struct {
 		Query struct {
@@ -72,14 +78,20 @@ func Geocode() {
 		Lon float64 `json:"lon"`
 		Lat float64 `json:"lat"`
 	}
-
-	var unMarshaledBatchResultResponse BatchGeocodeType
-
-	jsonMarshalError := json.Unmarshal(responseBody2, &unMarshaledBatchResultResponse)
+	var geocodeResults BatchGeocodeType
+	jsonMarshalError := json.Unmarshal(responseBody, &geocodeResults)
 	if jsonMarshalError != nil {
-		fmt.Println(jsonMarshalError)
+		fmt.Println("Unmarshal error: ", jsonMarshalError)
 		return
 	}
 
-	fmt.Println(unMarshaledBatchResultResponse)
+	fmt.Println("RESULTS: ", geocodeResults)
+}
+
+func Geocode() {
+	batchResultsUrl := getBatchResultsUrl()
+
+	time.Sleep(5 * time.Second)
+
+	getBatchResultsFromUrl(batchResultsUrl)
 }
