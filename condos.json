@@ -1,5 +1,26 @@
 [
   {
+    "address": "Vanha Sveinsintie 6 E 15",
+    "squareFootage": "99",
+    "sizeDescription": "4H+K+S",
+    "buildingType": "RIVITALO",
+    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-e-15/"
+  },
+  {
+    "address": "Solisevankuja 4 A 2",
+    "squareFootage": "102",
+    "sizeDescription": "5H+K+S",
+    "buildingType": "RIVITALO",
+    "url": "/asumisoikeusasunnot/espoo/suna/solisevankuja-4/asunto-a-2/"
+  },
+  {
+    "address": "Lyhtykuja 1-3 B 4",
+    "squareFootage": "96.5",
+    "sizeDescription": "4H+K+S",
+    "buildingType": "RIVITALO",
+    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/asunto-3-b-4/"
+  },
+  {
     "address": "Viputie 11 A 1",
     "squareFootage": "93.5",
     "sizeDescription": "4H+K+S",
@@ -19,13 +40,6 @@
     "sizeDescription": "5H+K+S",
     "buildingType": "RIVITALO",
     "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-h-25/"
-  },
-  {
-    "address": "Nuottalahdentie 21-23 E 10",
-    "squareFootage": "103",
-    "sizeDescription": "5H+K+S",
-    "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/asunto-e-10/"
   },
   {
     "address": "Herastuomarintie 6 C 11",
@@ -89,20 +103,6 @@
     "sizeDescription": "5H+K+S",
     "buildingType": "PARITALO",
     "url": "/asumisoikeusasunnot/espoo/mikkela/mikkelantorma-2-4/asunto-mikkelantorma-4-b-10/"
-  },
-  {
-    "address": "Herastuomarintie 6 C 10",
-    "squareFootage": "90.5",
-    "sizeDescription": "4H+K+S",
-    "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/herastuomarintie-6/asunto-c-10/"
-  },
-  {
-    "address": "Joupinmäensyrjä 2 A 3",
-    "squareFootage": "102.5",
-    "sizeDescription": "4H+K+S",
-    "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/jouppi/joupinmaensyrja-2/asunto-a-3/"
   },
   {
     "address": "Kuningattarenkuja 1",
