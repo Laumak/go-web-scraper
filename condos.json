@@ -1,5 +1,12 @@
 [
   {
+    "address": "Nygrannaksentie 3 G 12",
+    "squareFootage": "100",
+    "sizeDescription": "4H+K+S",
+    "buildingType": "PARITALO",
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-3/asunto-g-12/"
+  },
+  {
     "address": "Vanha Sveinsintie 6 E 15",
     "squareFootage": "99",
     "sizeDescription": "4H+K+S",
@@ -96,13 +103,6 @@
     "sizeDescription": "6H+K+S",
     "buildingType": "PARITALO",
     "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/asunto-d-8/"
-  },
-  {
-    "address": "Mikkeläntörmä 4 B 10",
-    "squareFootage": "121",
-    "sizeDescription": "5H+K+S",
-    "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mikkela/mikkelantorma-2-4/asunto-mikkelantorma-4-b-10/"
   },
   {
     "address": "Kuningattarenkuja 1",
