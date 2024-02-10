@@ -1,10 +1,8 @@
 package scraper
 
 import (
-	"encoding/csv"
 	"encoding/json"
 	"fmt"
-	"log"
 	"os"
 	"strings"
 
@@ -20,41 +18,6 @@ type CondoType struct {
 	Url             string `json:"url"`             // https://www.asuntosaatio.fi/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/
 	Lat             string `json:lat`
 	Lon             string `json:lon`
-}
-
-func writeCSV(condos []CondoType) {
-	file, err := os.Create("condos.csv")
-
-	if err != nil {
-		log.Fatalln("Failed to create output CSV file", err)
-	}
-
-	defer file.Close()
-
-	writer := csv.NewWriter(file)
-
-	// Write the CSV column headers
-	writer.Write([]string{
-		"address",
-		"squareFootage",
-		"sizeDescription",
-		"buildingType",
-		"url",
-	})
-
-	for _, condo := range condos {
-		condoRecord := []string{
-			condo.Address,
-			condo.SquareFootage,
-			condo.SizeDescription,
-			condo.BuildingType,
-			condo.Url,
-		}
-
-		writer.Write(condoRecord)
-	}
-
-	defer writer.Flush()
 }
 
 func WriteCondosJSON(availableCondos []CondoType) {
@@ -91,7 +54,6 @@ func scrapeCondos(url string) []CondoType {
 		descriptionStrings := strings.Split(description, ",")
 		condo.SizeDescription = strings.TrimSpace(descriptionStrings[0])
 		condo.BuildingType = strings.TrimSpace(descriptionStrings[1])
-		// TODO: Why no URL?
 		condo.Url = condoElement.ChildAttr("a", "href")
 
 		availableCondos = append(availableCondos, condo)
@@ -106,9 +68,6 @@ func scrapeCondos(url string) []CondoType {
 func Scrape() {
 	// Scrape data and store findings to a struct
 	availableCondos := scrapeCondos("https://www.asuntosaatio.fi/asunnot/etsi-asuntoa/?cities=Espoo&minSquareMeters=90&buildingTypes=Paritalo,Erillistalo,Rivitalo&roomTypes=4,5,6-99&type=AsoFilters")
-
-	// Write CSV with the gathered data
-	writeCSV(availableCondos)
 
 	WriteCondosJSON(availableCondos)
 }
