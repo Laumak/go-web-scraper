@@ -4,566 +4,728 @@
     "squareFootage": "100",
     "sizeDescription": "4H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-3/asunto-g-12/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-3/asunto-g-12/",
+    "Lat": "11",
+    "Lon": "11"
   },
   {
     "address": "Vanha Sveinsintie 6 E 15",
     "squareFootage": "99",
     "sizeDescription": "4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-e-15/"
+    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-e-15/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Solisevankuja 4 A 2",
     "squareFootage": "102",
     "sizeDescription": "5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/suna/solisevankuja-4/asunto-a-2/"
+    "url": "/asumisoikeusasunnot/espoo/suna/solisevankuja-4/asunto-a-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lyhtykuja 1-3 B 4",
     "squareFootage": "96.5",
     "sizeDescription": "4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/asunto-3-b-4/"
+    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/asunto-3-b-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Viputie 11 A 1",
     "squareFootage": "93.5",
     "sizeDescription": "4H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/"
+    "url": "/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Juvanpuistonkuja 2 C 12",
     "squareFootage": "98",
     "sizeDescription": "4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/niipperi/juvanpuistonkuja/asunto-2-c-12/"
+    "url": "/asumisoikeusasunnot/espoo/niipperi/juvanpuistonkuja/asunto-2-c-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Vanha Sveinsintie 6 H 25",
     "squareFootage": "110",
     "sizeDescription": "5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-h-25/"
+    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-h-25/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Herastuomarintie 6 C 11",
     "squareFootage": "98",
     "sizeDescription": "4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/herastuomarintie-6/asunto-c-11/"
+    "url": "/asumisoikeusasunnot/espoo/muurala/herastuomarintie-6/asunto-c-11/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kylvökuja 1-4 H 8",
     "squareFootage": "125.5",
     "sizeDescription": "6H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/asunto-h-8/"
+    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/asunto-h-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Vanha Sveinsintie 6 H 27",
     "squareFootage": "110",
     "sizeDescription": "5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-h-27/"
+    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/asunto-h-27/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kylvökuja 1-4 C 3",
     "squareFootage": "125.5",
     "sizeDescription": "6H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/asunto-c-3/"
+    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/asunto-c-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lyhtykuja 1-3 B 6",
     "squareFootage": "96.5",
     "sizeDescription": "4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/asunto-3-b-6/"
+    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/asunto-3-b-6/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lintukorpi 13 A 2",
     "squareFootage": "104",
     "sizeDescription": "5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorpi-13/asunto-a-2/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorpi-13/asunto-a-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kaskipuunkaari 5 D 8",
     "squareFootage": "116",
     "sizeDescription": "4H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/suvimetsa/kaskipuunkaari-5-ja-7-8/asunto-kaskipuunkaari-5-d-8/"
+    "url": "/asumisoikeusasunnot/espoo/suvimetsa/kaskipuunkaari-5-ja-7-8/asunto-kaskipuunkaari-5-d-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nuottalahdentie 21-23 D 8",
     "squareFootage": "120",
     "sizeDescription": "6H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/asunto-d-8/"
+    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/asunto-d-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kuningattarenkuja 1",
     "squareFootage": "59 – 92",
     "sizeDescription": "2H+K+S – 4H+K+S+KHH",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/vanttila/kuningattarenkuja-1/"
+    "url": "/asumisoikeusasunnot/espoo/vanttila/kuningattarenkuja-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Katajatie 5",
     "squareFootage": "79 – 109",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/kaitaa/katajatie-5/"
+    "url": "/asumisoikeusasunnot/espoo/kaitaa/katajatie-5/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Eestintaival 4 ja 12",
     "squareFootage": "45.5 – 90",
     "sizeDescription": "2H+KK+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/pisa/eestintaival-4-ja-12/"
+    "url": "/asumisoikeusasunnot/espoo/pisa/eestintaival-4-ja-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Elisenvaarankuja 5-6 ja 8",
     "squareFootage": "76.5 – 99,5",
     "sizeDescription": "3H+K+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/elisenvaarankuja-5-6-ja-8/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/elisenvaarankuja-5-6-ja-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Sinitiaisenpolku 1",
     "squareFootage": "122 – 122",
     "sizeDescription": "6H+K+S – 6H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/sinitiaisenpolku-1/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/sinitiaisenpolku-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Vanha Sveinsintie 6",
     "squareFootage": "52 – 110",
     "sizeDescription": "2H+KK+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/"
+    "url": "/asumisoikeusasunnot/espoo/laaksolahti/vanha-sveinsintie-6/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Ratalaaksonkuja 2-3 sekä 5 ja 8",
     "squareFootage": "79 – 115",
     "sizeDescription": "3H+K+S – 6H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/tuomarila/ratalaaksonkuja-2-3-seka-5-ja-8/"
+    "url": "/asumisoikeusasunnot/espoo/tuomarila/ratalaaksonkuja-2-3-seka-5-ja-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Sysimaa 7",
     "squareFootage": "85 – 94.5",
     "sizeDescription": "3H+K+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/miilukorpi/sysimaa-7/"
+    "url": "/asumisoikeusasunnot/espoo/miilukorpi/sysimaa-7/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nostoväenkuja 7",
     "squareFootage": "74 – 104",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintuvaara/nostovaenkuja-7/"
+    "url": "/asumisoikeusasunnot/espoo/lintuvaara/nostovaenkuja-7/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Solisevankuja 4",
     "squareFootage": "94 – 102",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/suna/solisevankuja-4/"
+    "url": "/asumisoikeusasunnot/espoo/suna/solisevankuja-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Joupinmäensyrjä 2",
     "squareFootage": "102.5 – 103,5",
     "sizeDescription": "4H+K+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/jouppi/joupinmaensyrja-2/"
+    "url": "/asumisoikeusasunnot/espoo/jouppi/joupinmaensyrja-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Makslahdentie 17",
     "squareFootage": "83 – 103",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/makslahdentie-17/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/makslahdentie-17/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Sinitiaisenpolku 4",
     "squareFootage": "100.5 – 101,5",
     "sizeDescription": "5H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/sinitiaisenpolku-4/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/sinitiaisenpolku-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kruununtie 23",
     "squareFootage": "75.5 – 110",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/kruununtie-23/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/kruununtie-23/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Järvenperäntie 13",
     "squareFootage": "138 – 138",
     "sizeDescription": "6H+K+S – 6H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/jarvenpera/jarvenperantie-13/"
+    "url": "/asumisoikeusasunnot/espoo/jarvenpera/jarvenperantie-13/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Rautiaisenkuja 2",
     "squareFootage": "80 – 108",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintuvaara/rautiaisenkuja-2/"
+    "url": "/asumisoikeusasunnot/espoo/lintuvaara/rautiaisenkuja-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Ritarintie 8",
     "squareFootage": "102.5 – 102,5",
     "sizeDescription": "4H+K+S – 4H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/kilo/ritarintie-8/"
+    "url": "/asumisoikeusasunnot/espoo/kilo/ritarintie-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Tyrskykuja 2",
     "squareFootage": "96.5 – 111,5",
     "sizeDescription": "5H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/kivenlahti/tyrskykuja-2/"
+    "url": "/asumisoikeusasunnot/espoo/kivenlahti/tyrskykuja-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Tikankolo 7",
     "squareFootage": "52 – 99",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/leppavaara/tikankolo-7/"
+    "url": "/asumisoikeusasunnot/espoo/leppavaara/tikankolo-7/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kylvökuja 1-4",
     "squareFootage": "125.5 – 125,5",
     "sizeDescription": "6H+K+S – 6H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/"
+    "url": "/asumisoikeusasunnot/espoo/niipperi/kylvokuja-1-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nihtisalontie 7",
     "squareFootage": "95 – 102",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/kilo/nihtisalontie-7/"
+    "url": "/asumisoikeusasunnot/espoo/kilo/nihtisalontie-7/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Järvitorppa 4",
     "squareFootage": "83 – 113",
     "sizeDescription": "2H+K+S – 4H+K+ASK.H+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/kaitaa/jarvitorppa-4/"
+    "url": "/asumisoikeusasunnot/espoo/kaitaa/jarvitorppa-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Finnoontie 36",
     "squareFootage": "52 – 106",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/pisa/finnoontie-36/"
+    "url": "/asumisoikeusasunnot/espoo/pisa/finnoontie-36/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Vilpolanpolku 2",
     "squareFootage": "112 – 112",
     "sizeDescription": "4H+K+S+ASH – 4H+K+S+ASH",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/kaupunginkallio/vilpolanpolku-2/"
+    "url": "/asumisoikeusasunnot/espoo/kaupunginkallio/vilpolanpolku-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kirvuntie 33",
     "squareFootage": "94 – 107",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/kirvuntie-33/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/kirvuntie-33/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Arttelikuja 1",
     "squareFootage": "56 – 92.5",
     "sizeDescription": "2H+K+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/iivisniemi/arttelikuja-1/"
+    "url": "/asumisoikeusasunnot/espoo/iivisniemi/arttelikuja-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Riilahdentie 53, Vesiniityntie 2 ja 12",
     "squareFootage": "76 – 103",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/kaitaa/riilahdentie-53-vesiniityntie-2-ja-12/"
+    "url": "/asumisoikeusasunnot/espoo/kaitaa/riilahdentie-53-vesiniityntie-2-ja-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Joupinmäensyrjä 3",
     "squareFootage": "84.5 – 92",
     "sizeDescription": "3H+K+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/jouppi/joupinmaensyrja-3/"
+    "url": "/asumisoikeusasunnot/espoo/jouppi/joupinmaensyrja-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nurmilinnuntie 3",
     "squareFootage": "56.5 – 105",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "PIENKERROSTALO",
-    "url": "/asumisoikeusasunnot/espoo/karakallio/nurmilinnuntie-3/"
+    "url": "/asumisoikeusasunnot/espoo/karakallio/nurmilinnuntie-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kaskipuunkaari 5 ja 7-8",
     "squareFootage": "56 – 116",
     "sizeDescription": "2H+KK+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/suvimetsa/kaskipuunkaari-5-ja-7-8/"
+    "url": "/asumisoikeusasunnot/espoo/suvimetsa/kaskipuunkaari-5-ja-7-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Espoontie 10",
     "squareFootage": "56.5 – 103",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/espoontie-10/"
+    "url": "/asumisoikeusasunnot/espoo/muurala/espoontie-10/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Voudinkuja 3",
     "squareFootage": "75 – 106",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/kauklahti/voudinkuja-3/"
+    "url": "/asumisoikeusasunnot/espoo/kauklahti/voudinkuja-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Eestintaival 16",
     "squareFootage": "74 – 101.5",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/eestintaival/eestintaival-16/"
+    "url": "/asumisoikeusasunnot/espoo/eestintaival/eestintaival-16/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Verkkokuja 6-8",
     "squareFootage": "120 – 120",
     "sizeDescription": "5H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/nuottalahti/verkkokuja-6-8/"
+    "url": "/asumisoikeusasunnot/espoo/nuottalahti/verkkokuja-6-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Juvanpuistonkuja",
     "squareFootage": "54 – 111.5",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/niipperi/juvanpuistonkuja/"
+    "url": "/asumisoikeusasunnot/espoo/niipperi/juvanpuistonkuja/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kurkijoentie 5",
     "squareFootage": "49.5 – 92,5",
     "sizeDescription": "2H+KK+S – 4H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/kurkijoentie-5/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/kurkijoentie-5/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nygrannaksentie 3",
     "squareFootage": "100 – 108",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-3/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Teirinpiha 3",
     "squareFootage": "82 – 104",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/teirinpiha-3/"
+    "url": "/asumisoikeusasunnot/espoo/muurala/teirinpiha-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Taavinharju 16",
     "squareFootage": "83 – 100.5",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/taavinharju-16/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/taavinharju-16/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Rauduntie 12",
     "squareFootage": "103 – 119",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/rauduntie-12/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/rauduntie-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Espoontie 12",
     "squareFootage": "56.5 – 104,5",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/espoontie-12/"
+    "url": "/asumisoikeusasunnot/espoo/muurala/espoontie-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Malminhaka 8",
     "squareFootage": "54 – 103",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/latokaski/malminhaka-8/"
+    "url": "/asumisoikeusasunnot/espoo/latokaski/malminhaka-8/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Urpiaisenkuja 5-7",
     "squareFootage": "95.5 – 108",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/urpiaisenkuja-5-7/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/urpiaisenkuja-5-7/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nygrannaksentie 9",
     "squareFootage": "78 – 124",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-9/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-9/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Uudenkylänmäki 23",
     "squareFootage": "110 – 115",
     "sizeDescription": "5H+K+S – 6H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/uudenkylanmaki-23/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/uudenkylanmaki-23/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Viherpeiponkuja 2",
     "squareFootage": "75.5 – 112",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintuvaara/viherpeiponkuja-2/"
+    "url": "/asumisoikeusasunnot/espoo/lintuvaara/viherpeiponkuja-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lintukorpi 13",
     "squareFootage": "46 – 116",
     "sizeDescription": "1H+TK+S – 6H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorpi-13/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorpi-13/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lintukorvenkuja 3",
     "squareFootage": "82.5 – 104",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorvenkuja-3/"
+    "url": "/asumisoikeusasunnot/espoo/lintukorpi/lintukorvenkuja-3/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kaukolantie 2",
     "squareFootage": "81 – 90",
     "sizeDescription": "3H+K+S – 4H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/kaukolantie-2/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/kaukolantie-2/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kaukolantie 22",
     "squareFootage": "78.5 – 98",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/laajalahti/kaukolantie-22/"
+    "url": "/asumisoikeusasunnot/espoo/laajalahti/kaukolantie-22/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Sininärhentie 12",
     "squareFootage": "45 – 100",
     "sizeDescription": "2H+KK+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/lintuvaara/sininarhentie-12/"
+    "url": "/asumisoikeusasunnot/espoo/lintuvaara/sininarhentie-12/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Isonjärventie 14",
     "squareFootage": "87.5 – 97,5",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/jarvenpera/isonjarventie-14/"
+    "url": "/asumisoikeusasunnot/espoo/jarvenpera/isonjarventie-14/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Leirikatu 8 ja 10",
     "squareFootage": "34 – 112",
     "sizeDescription": "1H+TK+S – 5H+K+S",
     "buildingType": "KERROSTALO",
-    "url": "/asumisoikeusasunnot/espoo/leppavaara/leirikatu-8-ja-10/"
+    "url": "/asumisoikeusasunnot/espoo/leppavaara/leirikatu-8-ja-10/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Rummunlyöjänkatu 2, Leppävaarankatu 15",
     "squareFootage": "37 – 94.5",
     "sizeDescription": "1H+KK – 4H+KT+S",
     "buildingType": "KERROSTALO",
-    "url": "/asumisoikeusasunnot/espoo/leppavaara/rummunlyojankatu-2-leppavaarankatu-15/"
+    "url": "/asumisoikeusasunnot/espoo/leppavaara/rummunlyojankatu-2-leppavaarankatu-15/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nuottalahdentie 30",
     "squareFootage": "108 – 109",
     "sizeDescription": "5H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-30/"
+    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-30/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Laidunrinne 11",
     "squareFootage": "50 – 115",
     "sizeDescription": "2H+K+S – 5H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/noykkio/laidunrinne-11/"
+    "url": "/asumisoikeusasunnot/espoo/noykkio/laidunrinne-11/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Kukkumäenrinne 1",
     "squareFootage": "121.5 – 152",
     "sizeDescription": "5H+K+S – 6H+K+S",
     "buildingType": "OMAKOTITALO",
-    "url": "/asumisoikeusasunnot/espoo/kukkumaki/kukkumaenrinne-1/"
+    "url": "/asumisoikeusasunnot/espoo/kukkumaki/kukkumaenrinne-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Herastuomarintie 6",
     "squareFootage": "78.5 – 109",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/muurala/herastuomarintie-6/"
+    "url": "/asumisoikeusasunnot/espoo/muurala/herastuomarintie-6/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Hirvisuontie 4",
     "squareFootage": "40.5 – 95,5",
     "sizeDescription": "2H+KK – 4H+K+S",
     "buildingType": "PIENKERROSTALO",
-    "url": "/asumisoikeusasunnot/espoo/gumbole/hirvisuontie-4/"
+    "url": "/asumisoikeusasunnot/espoo/gumbole/hirvisuontie-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Lyhtykuja 1",
     "squareFootage": "95.5 – 122",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/"
+    "url": "/asumisoikeusasunnot/espoo/tuomarila/lyhtykuja-1/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Malminmäentie 5",
     "squareFootage": "77 – 107.5",
     "sizeDescription": "3H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/malminmaki/malminmaentie-5/"
+    "url": "/asumisoikeusasunnot/espoo/malminmaki/malminmaentie-5/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Viputie 11",
     "squareFootage": "93.5 – 103,5",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/"
+    "url": "/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nuottalahdentie 21-23",
     "squareFootage": "91 – 120",
     "sizeDescription": "4H+K+S – 6H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/"
+    "url": "/asumisoikeusasunnot/espoo/nuottalahti/nuottalahdentie-21-23/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Haarniskakuja 6 ja 10",
     "squareFootage": "73.5 – 95,5",
     "sizeDescription": "3H+K+S – 4H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/kilo/haarniskakuja-6-ja-10/"
+    "url": "/asumisoikeusasunnot/espoo/kilo/haarniskakuja-6-ja-10/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Mikkeläntörmä 2-4",
     "squareFootage": "121 – 128.5",
     "sizeDescription": "5H+K+S – 5H+K+S",
     "buildingType": "PARITALO",
-    "url": "/asumisoikeusasunnot/espoo/mikkela/mikkelantorma-2-4/"
+    "url": "/asumisoikeusasunnot/espoo/mikkela/mikkelantorma-2-4/",
+    "Lat": "",
+    "Lon": ""
   },
   {
     "address": "Nygrannaksentie 2",
     "squareFootage": "91.5 – 105,5",
     "sizeDescription": "4H+K+S – 5H+K+S",
     "buildingType": "RIVITALO",
-    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-2/"
+    "url": "/asumisoikeusasunnot/espoo/mankkaa/nygrannaksentie-2/",
+    "Lat": "",
+    "Lon": ""
   }
 ]

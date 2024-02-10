@@ -10,7 +10,16 @@ import (
 	"net/http/httputil"
 	"os"
 	"time"
+	"web-scraper/scraper"
 )
+
+type BatchGeocodeType []struct {
+	Query struct {
+		Text string `json:"text"`
+	} `json:"query"`
+	Lon float64 `json:"lon"`
+	Lat float64 `json:"lat"`
+}
 
 func makeRequest(method string, url string, data []byte) *http.Response {
 	fmt.Println(method, data)
@@ -47,7 +56,7 @@ func getBatchResultsUrl() string {
 	url := "https://api.geoapify.com/v1/batch/geocode/search?apiKey=" + apiKey
 
 	// https://gobyexample.com/json
-	slice := []string{"Viputie 11", "Juvanpuistonkuja 2"}
+	slice := []string{"Nygrannaksentie 3 G 12", "Vanha Sveinsintie 6 E 15"}
 	requestBody, _ := json.Marshal(slice)
 
 	response := makeRequest("POST", url, []byte(requestBody))
@@ -66,26 +75,48 @@ func getBatchResultsUrl() string {
 	return r.Url
 }
 
-func getBatchResultsFromUrl(url string) {
+func getBatchResultsFromUrl(url string) any {
 	// Get content from batch request
 	response := makeRequest("GET", url, nil)
 	responseBody, _ := io.ReadAll(response.Body)
 
-	type BatchGeocodeType []struct {
-		Query struct {
-			Text string `json:"text"`
-		} `json:"query"`
-		Lon float64 `json:"lon"`
-		Lat float64 `json:"lat"`
-	}
 	var geocodeResults BatchGeocodeType
 	jsonMarshalError := json.Unmarshal(responseBody, &geocodeResults)
 	if jsonMarshalError != nil {
 		fmt.Println("Unmarshal error: ", jsonMarshalError)
-		return
 	}
 
 	fmt.Println("RESULTS: ", geocodeResults)
+
+	return geocodeResults
+}
+
+func readCondosJsonFileContents(filename string) []scraper.CondoType {
+	contents, err := os.ReadFile(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var content []scraper.CondoType
+	err = json.Unmarshal(contents, &content)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return content
+}
+
+func addGeocodeInfoToCondoJson(condos []scraper.CondoType, geocodeResults any) {
+	fmt.Println("HERE-------------------", geocodeResults)
+	for i := range condos {
+		// TODO: Use dynamic values from
+		if condos[i].Address == "Nygrannaksentie 3 G 12" {
+			condos[i].Lat = "11"
+			condos[i].Lon = "11"
+		}
+	}
+
+	scraper.WriteCondosJSON(condos)
 }
 
 func Geocode() {
@@ -96,5 +127,9 @@ func Geocode() {
 	// -> results are available. This could be polled in certain intervals (1 second?).
 	time.Sleep(5 * time.Second)
 
-	getBatchResultsFromUrl(batchResultsUrl)
+	geocodeResults := getBatchResultsFromUrl(batchResultsUrl)
+
+	oldCondoJson := readCondosJsonFileContents("condos.json")
+
+	addGeocodeInfoToCondoJson(oldCondoJson, geocodeResults)
 }
