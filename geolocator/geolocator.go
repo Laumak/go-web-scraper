@@ -9,11 +9,12 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"os"
+	"strconv"
 	"time"
 	"web-scraper/scraper"
 )
 
-type BatchGeocodeType []struct {
+type BatchGeocodeType struct {
 	Query struct {
 		Text string `json:"text"`
 	} `json:"query"`
@@ -21,8 +22,10 @@ type BatchGeocodeType []struct {
 	Lat float64 `json:"lat"`
 }
 
+type BatchGeocodeTypeResponse []BatchGeocodeType
+
 func makeRequest(method string, url string, data []byte) *http.Response {
-	fmt.Println(method, data)
+	fmt.Println(method, ": ", url)
 	client := &http.Client{}
 
 	// Get content from batch request
@@ -52,14 +55,24 @@ func makeRequest(method string, url string, data []byte) *http.Response {
 	return response
 }
 
-func getBatchResultsUrl() string {
+func createSliceOfCondoAddresses(condos []scraper.CondoType) []string {
+	var sliceOfStrings []string
+
+	for i := range condos {
+		sliceOfStrings = append(sliceOfStrings, condos[i].Address)
+	}
+
+	return sliceOfStrings
+}
+
+func getBatchResultsUrl(condoJson []scraper.CondoType) string {
 	// https://myprojects.geoapify.com/api/YzuOvi4LdmFMK7jCYQFL/keys
 	apiKey := os.Getenv("GEOAPIFY_API_KEY")
 	url := "https://api.geoapify.com/v1/batch/geocode/search?apiKey=" + apiKey
 
 	// https://gobyexample.com/json
-	slice := []string{"Nygrannaksentie 3 G 12", "Vanha Sveinsintie 6 E 15"}
-	requestBody, _ := json.Marshal(slice)
+	sliceOfCondoAddresses := createSliceOfCondoAddresses(condoJson)
+	requestBody, _ := json.Marshal(sliceOfCondoAddresses)
 
 	response := makeRequest("POST", url, []byte(requestBody))
 	responseBody, _ := io.ReadAll(response.Body)
@@ -77,12 +90,12 @@ func getBatchResultsUrl() string {
 	return r.Url
 }
 
-func getBatchResultsFromUrl(url string) any {
+func getBatchResultsFromUrl(url string) BatchGeocodeTypeResponse {
 	// Get content from batch request
 	response := makeRequest("GET", url, nil)
 	responseBody, _ := io.ReadAll(response.Body)
 
-	var geocodeResults BatchGeocodeType
+	var geocodeResults BatchGeocodeTypeResponse
 	jsonMarshalError := json.Unmarshal(responseBody, &geocodeResults)
 	if jsonMarshalError != nil {
 		fmt.Println("Unmarshal error: ", jsonMarshalError)
@@ -108,13 +121,13 @@ func readCondosJsonFileContents(filename string) []scraper.CondoType {
 	return content
 }
 
-func addGeocodeInfoToCondoJson(condos []scraper.CondoType, geocodeResults any) {
-	fmt.Println("HERE-------------------", geocodeResults)
-	for i := range condos {
-		// TODO: Use dynamic values from
-		if condos[i].Address == "Nygrannaksentie 3 G 12" {
-			condos[i].Lat = "11"
-			condos[i].Lon = "11"
+func addGeocodeInfoToCondoJson(condos []scraper.CondoType, geocodeResults []BatchGeocodeType) {
+	for i := range geocodeResults {
+		for j := range condos {
+			if geocodeResults[i].Query.Text == condos[j].Address {
+				condos[j].Lat = strconv.FormatFloat(geocodeResults[i].Lat, 'f', -1, 64)
+				condos[j].Lon = strconv.FormatFloat(geocodeResults[i].Lon, 'f', -1, 64)
+			}
 		}
 	}
 
@@ -122,12 +135,14 @@ func addGeocodeInfoToCondoJson(condos []scraper.CondoType, geocodeResults any) {
 }
 
 func Geocode() {
-	batchResultsUrl := getBatchResultsUrl()
+	condoJson := readCondosJsonFileContents("condos.json")
+	batchResultsUrl := getBatchResultsUrl(condoJson)
 
 	// Wait for batch results to be ready.
 	// We could also wait for "pending" "status" to go away in the batch results
 	// -> results are available. This could be polled in certain intervals (1 second?).
-	time.Sleep(5 * time.Second)
+	fmt.Println("Waiting for 45 seconds")
+	time.Sleep(45 * time.Second)
 
 	geocodeResults := getBatchResultsFromUrl(batchResultsUrl)
 
