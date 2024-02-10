@@ -91,6 +91,9 @@ func getBatchResultsFromUrl(url string) {
 func Geocode() {
 	batchResultsUrl := getBatchResultsUrl()
 
+	// Wait for batch results to be ready.
+	// We could also wait for "pending" "status" to go away in the batch results
+	// -> results are available. This could be polled in certain intervals (1 second?).
 	time.Sleep(5 * time.Second)
 
 	getBatchResultsFromUrl(batchResultsUrl)
