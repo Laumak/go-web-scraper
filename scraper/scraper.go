@@ -16,8 +16,8 @@ type CondoType struct {
 	SizeDescription string `json:"sizeDescription"` // 4H+K+S
 	BuildingType    string `json:"buildingType"`    // Paritalo
 	Url             string `json:"url"`             // https://www.asuntosaatio.fi/asumisoikeusasunnot/espoo/lippajarvi/viputie-11/asunto-a-1/
-	Lat             string `json:lat`
-	Lon             string `json:lon`
+	Lat             string `json:"lat"`
+	Lon             string `json:"lon"`
 }
 
 func WriteCondosJSON(availableCondos []CondoType) {
