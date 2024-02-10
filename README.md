@@ -20,3 +20,7 @@ For running the frontend, a (git ignored) `env.js` file must be added to the "fr
 const MAPS_API_KEY = "MAPS_API_KEY_HERE";
 const MAP_ID = "MAP_ID_HERE";
 ```
+
+## TODO
+
+1. Create server for JSON content to be served for the frontend (so that the condo data doesn't have to be copied to FE code)
