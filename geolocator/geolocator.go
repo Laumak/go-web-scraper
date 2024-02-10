@@ -36,7 +36,6 @@ func makeRequest(method string, url string, data []byte) *http.Response {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	fmt.Printf("REQUEST:\n%s", string(reqDump))
 
 	response, err := client.Do(request)
@@ -45,6 +44,9 @@ func makeRequest(method string, url string, data []byte) *http.Response {
 	}
 
 	respDump, _ := httputil.DumpResponse(response, true)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Printf("RESPONSE:\n%s", string(respDump))
 
 	return response
